@@ -86,18 +86,13 @@ public class CrimeListFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(CrimeHolder holder, int position) {
-
+            Crime crime = mCrimes.get(position);
+            holder.bind(crime);
         }
 
         @Override
         public int getItemCount() {
             return mCrimes.size();
-        }
-
-        @Override
-        public void onBindViewHolder(CrimeHolder holder, int position, List<Object> payloads) {
-            Crime crime = mCrimes.get(position);
-            holder.bind(crime);
         }
     }
 }
